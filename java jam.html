@@ -1,0 +1,26 @@
+<HTML>
+<HEAD>
+<TITLE>Jam</TITLE>
+</HEAD>
+<BODY>
+<FORM NAME = "formWaktu">
+Waktu Sekarang :
+<INPUT TYPE="TEXT"
+	NAME="textWaktu"
+	VALUE=""
+	SIZE="22">
+</FORM>
+<SCRIPT LANGUANGE ="JavaScript">
+function aturWaktu() {
+	var sekarang = new Date();
+	var waktuSekarang = sekarang.toLocaleString();
+	document.formWaktu.textWaktu.value = waktuSekarang;
+	setTimeout('aturWaktu()',1000);
+	return(true);
+}
+// Menjalankan fungsi aturWaktu
+aturWaktu();
+
+</SCRIPT>
+</BODY>
+</HTML>

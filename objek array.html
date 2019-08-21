@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>Properti prototype</TITLE>
+</HEAD>
+<BODY>
+<SCRIPT LANGUANGE ="JavaScript">
+	function tampilkanElemenArray(){
+		for (var i=0;i<this.length;i++){
+			document.write("{"+i+"}="+
+				this[i]+"<BR>");
+			}
+		}
+	Array.prototype.cetak=tampilkanElemenArray;
+	var musik = new Array("Jazz","Rock","Keroncong","Dangdut");
+	var tanaman = new Array("Aglaonema","Begonia","Bromelia");
+	document.write("isi array musik:<BR>");
+	musik.cetak();
+	document.write("isi array tanaman:<BR>");
+	tanaman.cetak();
+
+</SCRIPT>
+</BODY>
+</HTML>
